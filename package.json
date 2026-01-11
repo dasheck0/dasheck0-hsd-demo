@@ -1,0 +1,17 @@
+{
+  "name": "dasheck0-hsd-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stefan Neidig <s.neidig@nanogiants.de> (https://nanogiants.de/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "lefthook": "^2.0.13"
+  }
+}
