@@ -1,0 +1,125 @@
+.column {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 320px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 120px);
+  transition: background-color 0.2s ease;
+}
+
+.column-drag-over {
+  background-color: #e0e7ff;
+  box-shadow: inset 0 0 0 2px #6366f1;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.column-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.column-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  background-color: #e5e7eb;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.column-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100px;
+  padding-right: 4px;
+}
+
+/* Custom scrollbar */
+.column-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.column-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.column-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.column-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.column-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.column-empty-state p {
+  margin: 0;
+}
+
+.column-empty-state p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.column-empty-hint {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .column {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    min-width: 100%;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+
+  .column:last-child {
+    margin-bottom: 0;
+  }
+
+  .column-content {
+    max-height: 400px;
+  }
+
+  .column-title {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,89 @@
+.sprint-board {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px;
+}
+
+.sprint-board-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sprint-board-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sprint-board-columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .sprint-board {
+    padding: 16px;
+  }
+
+  .sprint-board-columns {
+    gap: 16px;
+  }
+
+  .sprint-board-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sprint-board {
+    padding: 12px;
+  }
+
+  .sprint-board-header {
+    margin-bottom: 16px;
+  }
+
+  .sprint-board-title {
+    font-size: 24px;
+  }
+
+  .sprint-board-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Horizontal scroll alternative for mobile */
+@media (max-width: 768px) {
+  .sprint-board-columns.horizontal-scroll {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    gap: 16px;
+  }
+
+  .sprint-board-columns.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .sprint-board-columns.horizontal-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .sprint-board-columns.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+
+  .sprint-board-columns.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
